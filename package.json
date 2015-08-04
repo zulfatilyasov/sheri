@@ -1,5 +1,5 @@
 {
-  "name": "janis",
+  "name": "sheri",
   "version": "0.0.1",
   "description": "react.js admin panel boilerplate",
   "main": "./lib",
@@ -53,12 +53,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zulfatilyasov/janis.git"
+    "url": "https://github.com/zulfatilyasov/sheri.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/zulfatilyasov/janis/issues"
+    "url": "https://github.com/zulfatilyasov/sheri/issues"
   },
-  "homepage": "https://github.com/zulfatilyasov/janis#readme"
+  "homepage": "https://github.com/zulfatilyasov/sheri#readme"
 }

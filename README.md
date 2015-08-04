@@ -7,5 +7,5 @@ React.js admin panel boilerpalte
 ## Run the app locally
 `npm start`
 
-## Build for Production, also as a node modules
+## Build node modules
 `npm run build`
