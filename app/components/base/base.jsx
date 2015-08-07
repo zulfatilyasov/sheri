@@ -21,7 +21,7 @@ var Base = React.createClass({
   },
   getInitialState: function () {
     return {
-      menuClosed: getWidth() < 1366,
+      menuClosed: getWidth() < 1366
     };
   },
   getChildContext: function () {

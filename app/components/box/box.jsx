@@ -1,10 +1,10 @@
 var React = require('react');
-var {Paper, IconButton} = require('material-ui');
+var {FontIcon, Paper, IconButton} = require('material-ui');
 
 var Box = React.createClass({
   render: function () {
     var boxMenu = '';
-    if(this.props.showBoxMenu){
+    if (this.props.showBoxMenu) {
       var iconStyle = {
         color: '#fff',
         fontSize: 20
@@ -21,7 +21,7 @@ var Box = React.createClass({
           iconStyle={iconStyle}
           style={style}
           onClick={this.props.onBoxMenuClick}
-          iconClassName="icon-settings" />
+          iconClassName="icon-settings"/>
       </div>;
     }
 
@@ -35,10 +35,16 @@ var Box = React.createClass({
         <div className="box">
           <If condition={this.props.title}>
             <div className="title">
-              <div className="title-text">{this.props.title}</div>
+              <div className="title-text">
+                <If condition={this.props.titleIcon}>
+                  <FontIcon className={this.props.titleIcon}/>
+                </If>
+                {this.props.title}
+              </div>
               {boxMenu}
             </div>
           </If>
+
           <div style={boxStyle} className="box-body">
             {this.props.children}
           </div>
