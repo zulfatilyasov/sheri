@@ -10,6 +10,7 @@ var DefaultTheme = require('../../themes/default');
 var ThemeManager = new mui.Styles.ThemeManager();
 var RouteHandler = Router.RouteHandler;
 var normalizeCss = require('normalize.css');
+var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 var getWidth = function () {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -56,7 +57,9 @@ var Base = React.createClass({
             ref="sidemenu"/>
 
           <div className="content">
-            <RouteHandler />
+            <ReactCSSTransitionGroup transitionName="fade">
+              <RouteHandler />
+            </ReactCSSTransitionGroup>
           </div>
         </div>
       </AppCanvas>
