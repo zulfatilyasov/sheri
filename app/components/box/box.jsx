@@ -37,7 +37,7 @@ var Box = React.createClass({
             <div className="title">
               <div className="title-text">
                 <If condition={this.props.titleIcon}>
-                  <FontIcon className={this.props.titleIcon}/>
+                  <FontIcon className={"icon " + this.props.titleIcon}/>
                 </If>
                 {this.props.title}
               </div>
