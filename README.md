@@ -1,4 +1,4 @@
-# Janis
+# Sheri
 React.js admin panel boilerpalte
 
 ## Install dependencies
