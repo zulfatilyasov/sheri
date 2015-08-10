@@ -4,14 +4,16 @@
   "description": "react.js admin panel boilerplate",
   "main": "./lib",
   "dependencies": {
-    "classnames": "^2.1.3",
     "html-webpack-plugin": "^1.6.0",
-    "jeet": "^6.1.2",
-    "material-ui": "^0.10.2",
     "normalize.css": "^3.0.3",
+    "react-paginate": "^0.1.35"
+  },
+  "peerDependencies": {
     "react": "^0.13.3",
-    "react-paginate": "^0.1.35",
-    "react-tap-event-plugin": "^0.1.7"
+    "react-tap-event-plugin": "^0.1.7",
+    "classnames": "^2.1.3",
+    "material-ui": "^0.10.2",
+    "jeet": "^6.1.2"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
