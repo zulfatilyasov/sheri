@@ -14,7 +14,7 @@ var getWidth = function () {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 };
 
-var Base = React.createClass({
+var Master = React.createClass({
   getInitialState: function () {
     return {
       menuClosed: getWidth() < 1366
@@ -54,4 +54,4 @@ var Base = React.createClass({
   }
 });
 
-module.exports = Base;
+module.exports = Master;
