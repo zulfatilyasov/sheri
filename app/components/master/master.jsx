@@ -26,6 +26,12 @@ var Master = React.createClass({
       menuClosed: !this.state.menuClosed
     });
   },
+  getHandlerKey: function () {
+    var childDepth = 1;
+    var childName = this.getRoutes()[childDepth].name;
+    var id = this.getParams().id;
+    return childName + id;
+  },
   render: function () {
     var pusherClass = this.state.menuClosed ? 'pusher menu-closed' : 'pusher menu-open';
     return (
@@ -45,7 +51,7 @@ var Master = React.createClass({
 
           <div className="content">
             <ReactCSSTransitionGroup transitionName="fade">
-              <RouteHandler />
+              <RouteHandler key={this.getHandlerKey()}/>
             </ReactCSSTransitionGroup>
           </div>
         </div>
