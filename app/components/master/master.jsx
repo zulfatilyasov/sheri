@@ -52,9 +52,14 @@ var Master = React.createClass({
             ref="sidemenu"/>
 
           <div className="content">
-            <ReactCSSTransitionGroup transitionName="fade">
-              <RouteHandler key={this.getHandlerKey()}/>
-            </ReactCSSTransitionGroup>
+            <If condition={this.props.animate}>
+              <ReactCSSTransitionGroup transitionName="page-animation">
+                <RouteHandler key={this.getHandlerKey()}/>
+              </ReactCSSTransitionGroup>
+              <Else/>
+              <RouteHandler/>
+            </If>
+
           </div>
         </div>
       </AppCanvas>
