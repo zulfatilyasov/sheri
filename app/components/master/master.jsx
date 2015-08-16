@@ -9,12 +9,14 @@ var SideMenu = require('../side-menu/side-menu');
 var RouteHandler = Router.RouteHandler;
 var normalizeCss = require('normalize.css');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+var State = require('react-router').State;
 
 var getWidth = function () {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 };
 
 var Master = React.createClass({
+  mixins: [State],
   getInitialState: function () {
     return {
       menuClosed: getWidth() < 1366
