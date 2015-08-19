@@ -1,11 +1,16 @@
 var React = require('react');
 var TableRow = React.createClass({
-  render: function() {
+  render: function () {
     var tableCells = [];
     for (var prop in this.props.headers) {
       if (this.props.headers[prop].show) {
+        var cellClass = 'cell ' + this.props.headers[prop].name;
         tableCells.push(
-          <td key={prop} data-title={this.props.headers[prop].name}>{this.props.rowData[prop]}</td>
+          <td key={prop} className={cellClass} data-title={this.props.headers[prop].name}>
+            <div className="cell-content">
+              {this.props.rowData[prop]}
+            </div>
+          </td>
         );
       }
     }
