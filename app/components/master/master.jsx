@@ -6,7 +6,7 @@ var LeftNav = mui.LeftNav;
 var AppCanvas = mui.AppCanvas;
 var TopNav = require('../top-nav/top-nav');
 var SideMenu = require('../side-menu/side-menu');
-var RouteHandler = Router.RouteHandler;
+// var RouteHandler = Router.RouteHandler;
 var normalizeCss = require('normalize.css');
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 var State = require('react-router').State;
@@ -52,14 +52,7 @@ var Master = React.createClass({
             ref="sidemenu"/>
 
           <div className="content">
-            <If condition={this.props.animate}>
-              <ReactCSSTransitionGroup transitionName="page-animation">
-                <RouteHandler key={this.getHandlerKey()}/>
-              </ReactCSSTransitionGroup>
-              <Else/>
-              <RouteHandler/>
-            </If>
-
+            {this.props.children}
           </div>
         </div>
       </AppCanvas>
