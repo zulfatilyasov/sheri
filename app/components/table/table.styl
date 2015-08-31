@@ -578,6 +578,46 @@
       color grey1
       top 55%
       margin-left -30px
+      
+table.table
+  margin-bottom 0px
+  thead
+    border-top none
+    th
+      padding-top 20px
+      padding-bottom 20px
+      border-bottom none
+      color: rgba(0, 0, 0, 0.54)
+      font-size 12px
+      font-weight 500
+  tr
+    border-bottom 1px solid #ddd
+    td
+      vertical-align middle
+      font-size 13px
+      padding 12px
+      transition background-color 0.2s
+      color: rgba(0, 0, 0, 0.84)
+
+table.table > caption + thead > tr:first-child > th:first-child,
+table.table > colgroup + thead > tr:first-child > th:first-child,
+table.table > thead:first-child > tr:first-child > th:first-child,
+table.table > caption + thead > tr:first-child > td:first-child,
+table.table > colgroup + thead > tr:first-child > td:first-child,
+table.table > thead:first-child > tr:first-child > td:first-child,
+table.table tr td:first-child
+  padding-left 24px
+
+table.table-hover.table-mc-light-blue > tbody > tr:hover > td, .table-hover.table-mc-light-blue > tbody > tr:hover > td a, .table-hover.table-mc-light-blue > tbody > tr:hover > th
+  color: #000
+
+table.table tr td.cell.actions
+  width 40px
+table.table-hover
+  tr:hover
+    td
+      background-color #f4f4f4
+      
 .pagination
   text-align center
   background-color: rgba(255, 255, 255, 0.9)
