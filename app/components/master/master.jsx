@@ -41,6 +41,7 @@ var Master = React.createClass({
         <div className={pusherClass}>
           <TopNav onLock={this.props.onLock}
                   logo={this.props.logo}
+                  controls={this.props.controls}
                   onProfileClick={this.props.onProfileClick}
                   userFirstName={this.props.user.firstName}
                   userLastName={this.props.user.lastName}
