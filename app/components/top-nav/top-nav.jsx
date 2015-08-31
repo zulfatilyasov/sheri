@@ -44,6 +44,11 @@ var TopNav = React.createClass({
                     tooltip={this.userName}>
           <Avatar>{this.userAbbr}</Avatar>
         </IconButton>
+        <If condition={this.props.controls}>
+          <div className="controls">
+            {this.props.controls}
+          </div>
+        </If>
       </nav>
     );
   }
