@@ -46,50 +46,46 @@ var Table = React.createClass({
     return (
       <div>
         <div className={'up-table ' + className}>
-          <table id="table" className="sortable table table-hover table-mc-light-blue">
-            <thead>
-            <tr>
-              <For each="k" of={Object.keys(this.state.headers)}>
-                <If condition={this.state.headers[k].show}>
-                  <th key={k} onClick={this.handleHeaderClick.bind(this, k)}>
-                    <div className="header-name">
-                      {this.state.headers[k].name}
-                      <If condition={this.state.headers[k].disableSort !== true}>
-                        <div>
-                          <If condition={this.state.headers[k].sort === true}>
-                            <div className="asc header-icon">
-                              <i className="icon-sort"></i>
-                            </div>
-                          </If>
-                          <If condition={this.state.headers[k].sort === false}>
-                            <div className="desc header-icon">
-                              <i className="icon-sort"></i>
-                            </div>
-                          </If>
-                        </div>
-                      </If>
-                    </div>
-                  </th>
-                </If>
-              </For>
-            </tr>
-            </thead>
-            <If condition={this.props.loading}>
-              <tbody className="loading-message">
+          <If condition={this.props.loading}>
+            <div className="loading-message">
+              <div className="loading-text">Loading...</div>
+            </div>
+            <Else/>
+            <table id="table" className="sortable table table-hover table-mc-light-blue">
+              <thead>
               <tr>
-                <td>
-                  <div className="loading-text">Loading...</div>
-                </td>
+                <For each="k" of={Object.keys(this.state.headers)}>
+                  <If condition={this.state.headers[k].show}>
+                    <th key={k} onClick={this.handleHeaderClick.bind(this, k)}>
+                      <div className="header-name">
+                        {this.state.headers[k].name}
+                        <If condition={this.state.headers[k].disableSort !== true}>
+                          <div>
+                            <If condition={this.state.headers[k].sort === true}>
+                              <div className="asc header-icon">
+                                <i className="icon-sort"></i>
+                              </div>
+                            </If>
+                            <If condition={this.state.headers[k].sort === false}>
+                              <div className="desc header-icon">
+                                <i className="icon-sort"></i>
+                              </div>
+                            </If>
+                          </div>
+                        </If>
+                      </div>
+                    </th>
+                  </If>
+                </For>
               </tr>
-              </tbody>
-              <Else/>
+              </thead>
               <tbody>
               <For each="rowData" index="i" of={this.props.tableData}>
                 <TableRow key={i} headers={this.props.headers} rowData={rowData}/>
               </For>
               </tbody>
-            </If>
-          </table>
+            </table>
+          </If>
           <If condition={this.props.showPagination}>
             <div>
               <ReactPaginate previousLabel={"<"}
