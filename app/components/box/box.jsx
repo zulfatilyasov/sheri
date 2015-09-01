@@ -25,6 +25,13 @@ var Box = React.createClass({
       </div>;
     }
 
+    var boxControls = '';
+    if(this.props.boxControls){
+      boxControls = <div className="tools">
+        {this.props.boxControls}
+      </div>
+    }
+
     var boxStyle = {
       padding: this.props.contentPadding || 15,
       paddingBottom: this.props.contentPadding || 13
@@ -42,6 +49,7 @@ var Box = React.createClass({
                 {this.props.title}
               </div>
               {boxMenu}
+              {boxControls}
             </div>
           </If>
 
