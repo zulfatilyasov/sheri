@@ -1,7 +1,11 @@
 var React = require('react');
 var {FontIcon, Paper, IconButton} = require('material-ui');
+let StylePropable = require('material-ui/lib/mixins/style-propable');
 
 var Box = React.createClass({
+
+  mixins: [StylePropable],
+
   render: function () {
     var boxMenu = '';
     if (this.props.showBoxMenu) {
@@ -32,10 +36,13 @@ var Box = React.createClass({
       </div>
     }
 
-    var boxStyle = {
-      padding: this.props.contentPadding || 24,
-      paddingBottom: this.props.contentPadding || 24
-    };
+    // var boxStyle = {
+    //   padding: this.props.contentPadding || 24,
+    //   paddingBottom: this.props.contentPadding || 24
+    //   paddingBottom: this.props.paddingTop || 24
+    // };
+
+    var boxStyle = this.mergeAndPrefix({padding: 24}, this.props.style);
 
     return (
       <Paper className={this.props.className} zDepth={1}>
