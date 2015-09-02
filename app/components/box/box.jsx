@@ -33,8 +33,8 @@ var Box = React.createClass({
     }
 
     var boxStyle = {
-      padding: this.props.contentPadding || 15,
-      paddingBottom: this.props.contentPadding || 13
+      padding: this.props.contentPadding || 24,
+      paddingBottom: this.props.contentPadding || 24
     };
 
     return (
