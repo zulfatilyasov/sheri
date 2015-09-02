@@ -58,9 +58,11 @@ var Table = React.createClass({
                   <If condition={this.state.headers[k].show}>
                     <th key={k} onClick={this.handleHeaderClick.bind(this, k)}>
                       <div className="header-name">
-                        {this.state.headers[k].name}
+                        <div className="header-text">
+                          {this.state.headers[k].name}
+                        </div>
                         <If condition={this.state.headers[k].disableSort !== true}>
-                          <div>
+                          <div className="icon">
                             <If condition={this.state.headers[k].sort === true}>
                               <div className="asc header-icon">
                                 <i className="icon-sort"></i>
