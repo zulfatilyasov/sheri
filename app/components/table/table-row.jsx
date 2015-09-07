@@ -14,8 +14,8 @@ var TableRow = React.createClass({
         );
       }
     }
-    
-    var rowClassName = this.props.rowData['hightlight'] ? 'hightlight' : '';
+
+    var rowClassName = this.props.rowData['highlight'] ? 'highlight' : '';
     return (
       <tr className={rowClassName}>{tableCells}</tr>
     );
