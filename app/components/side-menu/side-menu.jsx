@@ -92,6 +92,7 @@ var SideMenu = React.createClass({
     var menuItemStyle = {color: '#fff'};
     return (
       <LeftNav
+        disableSwipeToOpen={true}
         onChange={this.props.onMenuChange}
         className="leftnav"
         style={leftNavStyles}
