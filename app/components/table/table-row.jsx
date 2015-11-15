@@ -8,7 +8,7 @@ var TableRow = React.createClass({
         tableCells.push(
           <td key={prop} className={cellClass} data-title={this.props.headers[prop].name}>
             <div className="cell-content">
-              <a href="javascript:void(0)" onClick={this.props.onRowClick}>
+              <a href="javascript:void(0)" onClick={this.props.onRowClick.bind(this, this.props.rowData[prop])}>
                 {this.props.rowData[prop]}
               </a>
             </div>
