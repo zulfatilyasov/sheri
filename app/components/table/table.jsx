@@ -83,7 +83,7 @@ var Table = React.createClass({
               </thead>
               <tbody>
               <For each="rowData" index="i" of={this.props.tableData}>
-                <TableRow key={i} headers={this.props.headers} rowData={rowData}/>
+                <TableRow key={i} onRowClick={this.props.onRowClick} headers={this.props.headers} rowData={rowData}/>
               </For>
               </tbody>
             </table>
