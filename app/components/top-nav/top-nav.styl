@@ -12,8 +12,18 @@
     float right
     margin-top 4px
     margin-right 10px
+
   .exit, .chat
     float right
     margin-top 4px
+  .exit
+    &:before
+      content: ' '
+      position: absolute
+      top: 0px
+      left: 0px
+      height: 100%
+      width: 1px
+      background: linear-gradient( to bottom, #fff, #ddd, #fff);
   .controls
     float right

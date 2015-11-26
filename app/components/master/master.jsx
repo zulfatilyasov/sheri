@@ -40,6 +40,7 @@ var Master = React.createClass({
       <AppCanvas>
         <div className={pusherClass}>
           <TopNav onLock={this.props.onLock}
+                  onChat={this.props.onChat}
                   logo={this.props.logo}
                   controls={this.props.controls}
                   onProfileClick={this.props.onProfileClick}
