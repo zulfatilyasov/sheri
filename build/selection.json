@@ -27,9 +27,9 @@
 				"name": "sort",
 				"ligatures": "sort"
 			},
-			"setIdx": 2,
-			"setId": 0,
-			"iconIdx": 136
+			"setIdx": 0,
+			"setId": 11,
+			"iconIdx": 0
 		},
 		{
 			"icon": {
@@ -57,9 +57,9 @@
 				"name": "menu",
 				"ligatures": "menu"
 			},
-			"setIdx": 2,
-			"setId": 0,
-			"iconIdx": 526
+			"setIdx": 0,
+			"setId": 11,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -87,9 +87,9 @@
 				"name": "lock",
 				"ligatures": "lock"
 			},
-			"setIdx": 2,
-			"setId": 0,
-			"iconIdx": 683
+			"setIdx": 0,
+			"setId": 11,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -117,9 +117,39 @@
 				"name": "settings",
 				"ligatures": "settings"
 			},
-			"setIdx": 2,
-			"setId": 0,
-			"iconIdx": 715
+			"setIdx": 0,
+			"setId": 11,
+			"iconIdx": 3
+		},
+		{
+			"icon": {
+				"paths": [
+					"M768 342v-86h-512v86h512zM768 470v-86h-512v86h512zM768 598v-86h-512v86h512zM938 170v768l-170-170h-598q-34 0-59-26t-25-60v-512q0-34 25-59t59-25h684q34 0 59 25t25 59z"
+				],
+				"attrs": [
+					{}
+				],
+				"isMulticolor": false,
+				"tags": [
+					"comment"
+				],
+				"defaultCode": 57416,
+				"grid": 24
+			},
+			"attrs": [
+				{}
+			],
+			"properties": {
+				"order": 52,
+				"id": 72,
+				"prevSize": 24,
+				"code": 57416,
+				"name": "comment",
+				"ligatures": "comment"
+			},
+			"setIdx": 7,
+			"setId": 4,
+			"iconIdx": 72
 		}
 	],
 	"height": 1024,
@@ -140,7 +170,8 @@
 				"emSize": 1024,
 				"baseline": 6.25,
 				"whitespace": 50
-			}
+			},
+			"embed": false
 		},
 		"imagePref": {
 			"prefix": "icon-",

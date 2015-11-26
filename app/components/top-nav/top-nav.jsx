@@ -38,6 +38,13 @@ var TopNav = React.createClass({
                       tooltip="Log out">
           </IconButton>
         </div>
+        <div className="chat">
+          <IconButton style={style}
+                      onClick={this.props.onChat}
+                      iconStyle={iconStyle}
+                      iconClassName="icon icon-comment">
+          </IconButton>
+        </div>
         <IconButton style={iconButtonStyle}
                     onClick={this.props.onProfileClick}
                     className="avatar"
