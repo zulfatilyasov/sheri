@@ -49,7 +49,7 @@ var TopNav = React.createClass({
                     onClick={this.props.onProfileClick}
                     className="avatar"
                     tooltip={this.userName}>
-          <Avatar>{this.userAbbr}</Avatar>
+          <Avatar src={this.props.profileImageUrl}>{this.userAbbr}</Avatar>
         </IconButton>
         <If condition={this.props.controls}>
           <div className="controls">
