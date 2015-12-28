@@ -1,6 +1,5 @@
 var React = require('react');
 var mui = require('material-ui');
-var MenuItem = require('material-ui/lib/menus/menu-item');
 var LeftNav = require('material-ui/lib/left-nav');
 var ThemeManager = mui.Styles.ThemeManager;
 var DefaultTheme = require('../../themes/default.js');
