@@ -8,7 +8,6 @@ var TopNav = require('../top-nav/top-nav');
 var SideMenu = require('../side-menu/side-menu');
 // var RouteHandler = Router.RouteHandler;
 var normalizeCss = require('normalize.css');
-var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 var State = require('react-router').State;
 
 var getWidth = function () {
