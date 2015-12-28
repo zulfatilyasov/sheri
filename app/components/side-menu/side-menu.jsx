@@ -1,7 +1,7 @@
 var React = require('react');
 var mui = require('material-ui');
 var LeftNav = mui.LeftNav, MenuItem = mui.MenuItem;
-var ThemeManager = new mui.Styles.ThemeManager;
+var ThemeManager = mui.Styles.ThemeManager;
 var DefaultTheme = require('../../themes/default.js');
 
 var debounce = function(func, wait, immediate) {
@@ -42,7 +42,7 @@ var SideMenu = React.createClass({
   childContextTypes: {
     muiTheme: React.PropTypes.object
   },
-  
+
   getInitialState: function() {
     var isOpen = getWidth() > threshold;
     return {
