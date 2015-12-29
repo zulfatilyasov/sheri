@@ -93,14 +93,13 @@ var SideMenu = React.createClass({
     return (
       <LeftNav
         disableSwipeToOpen={true}
-        onChange={this.props.onMenuChange}
         className="leftnav"
         style={leftNavStyles}
         menuItemStyle={menuItemStyle}
         ref="menu"
         docked={this.state.isDocked}>
           <For each="menuItem" of={this.props.menuItems}> 
-            <MenuItem onClick={this.props.onMenuChange.bind(null, menuItem.route)}>{menuItem.text}</MenuItem>
+            <MenuItem key={menuItem.route} onClick={this.props.onMenuChange.bind(null, menuItem.route)}>{menuItem.text}</MenuItem>
           </For>
       </LeftNav>
     );
