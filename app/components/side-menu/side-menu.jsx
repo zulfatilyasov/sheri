@@ -58,14 +58,12 @@ var SideMenu = React.createClass({
         isDocked: false,
         isOpen: false
       });
-      this.refs.menu.close();
     }
     if (w > threshold && !this.state.isOpen) {
       this.setState({
         isDocked: true,
         isOpen: true
       });
-      this.refs.menu.open();
     }
   },
   componentDidMount: function() {
@@ -73,7 +71,6 @@ var SideMenu = React.createClass({
     this.checkMenuShouldOpen();
   },
   toggle: function() {
-    this.refs.menu.toggle();
     this.setState({
       isOpen: !this.state.isOpen
     });
@@ -93,10 +90,11 @@ var SideMenu = React.createClass({
     return (
       <LeftNav
         disableSwipeToOpen={true}
+        open={this.state.isOpen}
         className="leftnav"
+        onRequestChange={open => this.setState({isOpen: open})}
         style={leftNavStyles}
         menuItemStyle={menuItemStyle}
-        ref="menu"
         docked={this.state.isDocked}>
           <For each="menuItem" of={this.props.menuItems}> 
             <MenuItem key={menuItem.route} onClick={this.props.onMenuChange.bind(null, menuItem.route)}>{menuItem.text}</MenuItem>

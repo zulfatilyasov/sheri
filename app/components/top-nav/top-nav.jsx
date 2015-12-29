@@ -1,8 +1,7 @@
 var React = require('react');
 var MenuButton = require('../menu-button/menu-button');
-var mui = require('material-ui'),
-  Avatar = mui.Avatar,
-  IconButton = mui.IconButton;
+var Avatar = require('material-ui/lib/avatar');
+var IconButton = require('material-ui/lib/icon-button');
 
 var TopNav = React.createClass({
   render: function () {
@@ -49,7 +48,7 @@ var TopNav = React.createClass({
                     onClick={this.props.onProfileClick}
                     className="avatar"
                     tooltip={this.userName}>
-          <Avatar src={this.props.profileImageUrl}>{this.userAbbr}</Avatar>
+          <Avatar src={this.props.profileImageUrl}/>
         </IconButton>
         <If condition={this.props.controls}>
           <div className="controls">
