@@ -75,6 +75,12 @@ var SideMenu = React.createClass({
       isOpen: !this.state.isOpen
     });
   },
+  handleMenuItemClick: function(route) {
+    this.props.onMenuChange(route);
+    this.setState({
+      isOpen: false
+    });
+  },
   render: function() {
     var leftNavStyles = {
       top: this.state.isDocked ? 57 : 0,
@@ -87,6 +93,7 @@ var SideMenu = React.createClass({
     };
 
     var menuItemStyle = {color: '#fff'};
+
     return (
       <LeftNav
         disableSwipeToOpen={true}
@@ -97,7 +104,7 @@ var SideMenu = React.createClass({
         menuItemStyle={menuItemStyle}
         docked={this.state.isDocked}>
           <For each="menuItem" of={this.props.menuItems}> 
-            <MenuItem key={menuItem.route} onClick={this.props.onMenuChange.bind(null, menuItem.route)}>{menuItem.text}</MenuItem>
+            <MenuItem key={menuItem.route} onClick={this.handleMenuItemClick.bind(this, menuItem.route)}>{menuItem.text}</MenuItem>
           </For>
       </LeftNav>
     );
