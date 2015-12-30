@@ -34,15 +34,6 @@ var getWidth = function() {
 var threshold = 2560;
 
 var SideMenu = React.createClass({
-  getChildContext: function() {
-    return {
-      muiTheme: ThemeManager.getMuiTheme(DefaultTheme)
-    };
-  },
-
-  childContextTypes: {
-    muiTheme: React.PropTypes.object
-  },
 
   getInitialState: function() {
     var isOpen = getWidth() > threshold;
