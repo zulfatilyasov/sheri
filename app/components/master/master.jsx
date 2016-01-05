@@ -4,14 +4,12 @@ import { LeftNav, AppCanvas } from 'material-ui';
 import TopNav from '../top-nav/top-nav'
 import SideMenu from '../side-menu/side-menu'
 import normalizeCss from 'normalize.css'
-import State from 'react-router'
 
 var getWidth = function () {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 };
 
 var Master = React.createClass({
-  mixins: [State],
   getInitialState: function () {
     return {
       menuClosed: getWidth() < 1366
