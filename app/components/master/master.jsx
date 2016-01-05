@@ -1,13 +1,10 @@
-var React = require('react');
-var Router = require('react-router');
-var mui = require('material-ui');
-var LeftNav = mui.LeftNav;
-var AppCanvas = mui.AppCanvas;
-var TopNav = require('../top-nav/top-nav');
-var SideMenu = require('../side-menu/side-menu');
-// var RouteHandler = Router.RouteHandler;
-var normalizeCss = require('normalize.css');
-var State = require('react-router').State;
+import React from 'react'
+import Router from 'react-router'
+import { LeftNav, AppCanvas } from 'material-ui';
+import TopNav from '../top-nav/top-nav'
+import SideMenu from '../side-menu/side-menu'
+import normalizeCss from 'normalize.css'
+import State from 'react-router'
 
 var getWidth = function () {
   return Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -61,4 +58,4 @@ var Master = React.createClass({
   }
 });
 
-module.exports = Master;
+export default Master;

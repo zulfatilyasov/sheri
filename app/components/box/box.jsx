@@ -1,6 +1,6 @@
-var React = require('react');
-var {FontIcon, Paper, IconButton} = require('material-ui');
-let StylePropable = require('material-ui/lib/mixins/style-propable');
+import React from 'react'
+import { FontIcon, Paper, IconButton } from 'material-ui'
+import StylePropable from 'material-ui/lib/mixins/style-propable'
 
 var Box = React.createClass({
 
@@ -69,4 +69,4 @@ var Box = React.createClass({
   }
 });
 
-module.exports = Box;
+export default Box;

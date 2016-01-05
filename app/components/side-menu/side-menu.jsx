@@ -1,9 +1,8 @@
-var React = require('react');
-var mui = require('material-ui');
-var MenuItem = require('material-ui/lib/menus/menu-item');
-var LeftNav = require('material-ui/lib/left-nav');
-var ThemeManager = mui.Styles.ThemeManager;
-var DefaultTheme = require('../../themes/default.js');
+import React from 'react'
+import mui from 'material-ui'
+import MenuItem from 'material-ui/lib/menus/menu-item'
+import LeftNav from 'material-ui/lib/left-nav'
+import DefaultTheme from '../../themes/default.js'
 
 var debounce = function(func, wait, immediate) {
   var timeout;
@@ -102,4 +101,4 @@ var SideMenu = React.createClass({
   }
 });
 
-module.exports = SideMenu;
+export default SideMenu;
