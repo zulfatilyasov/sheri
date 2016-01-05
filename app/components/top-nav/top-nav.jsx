@@ -1,7 +1,7 @@
-var React = require('react');
-var MenuButton = require('../menu-button/menu-button');
-var Avatar = require('material-ui/lib/avatar');
-var IconButton = require('material-ui/lib/icon-button');
+import React from 'react';
+import MenuButton from '../menu-button/menu-button';
+import Avatar from 'material-ui/lib/avatar';
+import IconButton from 'material-ui/lib/icon-button';
 
 var TopNav = React.createClass({
   render: function () {
@@ -60,4 +60,4 @@ var TopNav = React.createClass({
   }
 });
 
-module.exports = TopNav;
+export default TopNav;
