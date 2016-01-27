@@ -34,6 +34,7 @@ var Master = React.createClass({
         <div className={pusherClass}>
           <TopNav onLock={this.props.onLock}
                   onChat={this.props.onChat}
+                  onNotifcationsClick={this.props.onNotifcationsClick}
                   profileImageUrl={this.props.profileImageUrl}
                   logo={this.props.logo}
                   controls={this.props.controls}
