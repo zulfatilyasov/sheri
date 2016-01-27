@@ -44,6 +44,13 @@ var TopNav = React.createClass({
                       iconClassName="icon icon-comment">
           </IconButton>
         </div>
+        <div className="notifications">
+          <IconButton style={style}
+                      onClick={this.props.onNotifcationsClick}
+                      iconStyle={iconStyle}
+                      iconClassName="icon icon-notifications">
+          </IconButton>
+        </div>
         <IconButton style={iconButtonStyle}
                     onClick={this.props.onProfileClick}
                     className="avatar"
