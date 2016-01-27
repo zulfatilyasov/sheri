@@ -37,6 +37,12 @@ var TopNav = React.createClass({
                       tooltip="Log out">
           </IconButton>
         </div>
+        <IconButton style={iconButtonStyle}
+                    onClick={this.props.onProfileClick}
+                    className="avatar"
+                    tooltip={this.userName}>
+          <Avatar src={this.props.profileImageUrl}/>
+        </IconButton>
         <div className="chat">
           <IconButton style={style}
                       onClick={this.props.onChat}
@@ -51,12 +57,6 @@ var TopNav = React.createClass({
                       iconClassName="icon icon-notifications">
           </IconButton>
         </div>
-        <IconButton style={iconButtonStyle}
-                    onClick={this.props.onProfileClick}
-                    className="avatar"
-                    tooltip={this.userName}>
-          <Avatar src={this.props.profileImageUrl}/>
-        </IconButton>
         <If condition={this.props.controls}>
           <div className="controls">
             {this.props.controls}
