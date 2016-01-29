@@ -51,7 +51,7 @@ var TopNav = React.createClass({
                       iconClassName="icon icon-comment">
           </IconButton>
         </div>
-        <div className="notifications">
+        <div className="bell">
             <If condition={this.props.newNotificationCount}>
               <div className="badge">
                 {this.props.newNotificationCount}
