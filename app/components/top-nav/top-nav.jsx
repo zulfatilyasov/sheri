@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuButton from '../menu-button/menu-button';
 import Avatar from 'material-ui/lib/avatar';
+import Badge from 'material-ui/lib/badge';
 import IconButton from 'material-ui/lib/icon-button';
 
 var TopNav = React.createClass({
@@ -51,11 +52,16 @@ var TopNav = React.createClass({
           </IconButton>
         </div>
         <div className="notifications">
-          <IconButton style={style}
-                      onClick={this.props.onNotifcationsClick}
-                      iconStyle={iconStyle}
-                      iconClassName="icon icon-notifications">
-          </IconButton>
+          <Badge
+            badgeContent={this.props.newNotificationCount}
+            badgeStyle={{top: 12, right: 12}}
+            primary={true}>
+            <IconButton style={style}
+                        onClick={this.props.onNotifcationsClick}
+                        iconStyle={iconStyle}
+                        iconClassName="icon icon-notifications">
+            </IconButton>
+          </Badge>
         </div>
         <If condition={this.props.controls}>
           <div className="controls">

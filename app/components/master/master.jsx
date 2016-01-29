@@ -35,6 +35,7 @@ var Master = React.createClass({
           <TopNav onLock={this.props.onLock}
                   onChat={this.props.onChat}
                   onNotifcationsClick={this.props.onNotifcationsClick}
+                  newNotificationCount={this.props.newNotificationCount}
                   profileImageUrl={this.props.profileImageUrl}
                   logo={this.props.logo}
                   controls={this.props.controls}
