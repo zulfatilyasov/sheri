@@ -52,9 +52,11 @@ var TopNav = React.createClass({
           </IconButton>
         </div>
         <div className="notifications">
-            <div className="badge">
-              {this.props.newNotificationCount}
-            </div>
+            <If condition={this.props.newNotificationCount}>
+              <div className="badge">
+                {this.props.newNotificationCount}
+              </div>
+            </If>
             <IconButton style={style}
                         onClick={this.props.onNotifcationsClick}
                         iconStyle={iconStyle}

@@ -17,13 +17,26 @@
     float right
     margin-top 4px
     position relative
-    
+
   .notifications
+    margin-right 10px
     .badge
-      position absolute
-      top 0px
-      left 0px
-      
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      position: absolute;
+      top: -1px;
+      right: -7px;
+      font-weight: 500;
+      font-size: 12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #009be8;
+      color: #ffffff;      
   .chat
     margin-right 10px
   .exit
