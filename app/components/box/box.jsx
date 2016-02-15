@@ -1,6 +1,8 @@
-import React from 'react'
-import { FontIcon, Paper, IconButton } from 'material-ui'
-import StylePropable from 'material-ui/lib/mixins/style-propable'
+import React from 'react';
+import FontIcon from 'material-ui/lib/font-icon';
+import Paper from 'material-ui/lib/paper';
+import IconButton from 'material-ui/lib/icon-button';
+import StylePropable from 'material-ui/lib/mixins/style-propable';
 
 var Box = React.createClass({
 
@@ -42,7 +44,7 @@ var Box = React.createClass({
     //   paddingBottom: this.props.paddingTop || 24
     // };
 
-    var boxStyle = this.mergeAndPrefix({padding: 24}, this.props.style);
+    var boxStyle = this.mergeStyles({padding: 24}, this.props.style);
 
     return (
       <Paper className={this.props.className} zDepth={1}>

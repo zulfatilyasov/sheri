@@ -1,5 +1,4 @@
 import React from 'react'
-import mui from 'material-ui'
 import MenuItem from 'material-ui/lib/menus/menu-item'
 import LeftNav from 'material-ui/lib/left-nav'
 import DefaultTheme from '../../themes/default.js'

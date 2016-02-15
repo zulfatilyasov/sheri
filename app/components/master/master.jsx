@@ -1,6 +1,7 @@
 import React from 'react'
 import Router from 'react-router'
-import { LeftNav, AppCanvas } from 'material-ui';
+import LeftNav from 'material-ui/lib/left-nav';
+import AppCanvas from 'material-ui/lib/app-canvas';
 import TopNav from '../top-nav/top-nav'
 import SideMenu from '../side-menu/side-menu'
 import normalizeCss from 'normalize.css'
