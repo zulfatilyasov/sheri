@@ -1,5 +1,4 @@
 var React = require('react');
-var PureRenderMixin = require('react-addons-pure-render-mixin');
 
 var areEqual = function(objA, objB){
   if (objA === objB) {
@@ -29,8 +28,6 @@ var areEqual = function(objA, objB){
 }
 
 var TableRow = React.createClass({
-  mixins: [PureRenderMixin],
-
   shouldComponentUpdate(nextProps) {
     return !areEqual(this.props.rowData, nextProps.rowData) || !areEqual(this.props.headers, nextProps.headers);
   },
