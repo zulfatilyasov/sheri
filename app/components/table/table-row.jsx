@@ -1,5 +1,9 @@
 var React = require('react');
+var PureRenderMixin = require('react-addons-pure-render-mixin');
+
 var TableRow = React.createClass({
+  mixins: [PureRenderMixin],
+
   render: function () {
     var tableCells = [];
     for (var prop in this.props.headers) {
