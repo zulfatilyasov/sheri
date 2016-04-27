@@ -1,8 +1,39 @@
 var React = require('react');
 var PureRenderMixin = require('react-addons-pure-render-mixin');
 
+var areEqual = function(objA, objB){
+  if (objA === objB) {
+    return true;
+  }
+
+  if (typeof objA !== 'object' || objA === null || typeof objB !== 'object' || objB === null) {
+    return false;
+  }
+
+  var keysA = Object.keys(objA);
+  var keysB = Object.keys(objB);
+
+  if (keysA.length !== keysB.length) {
+    return false;
+  }
+
+  // Test for A's keys different from B.
+  var bHasOwnProperty = hasOwnProperty.bind(objB);
+  for (var i = 0; i < keysA.length; i++) {
+    if (!bHasOwnProperty(keysA[i]) || (objA[keysA[i]] !== objB[keysA[i]] && typeof objB[keysA[i]] !== 'object')) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 var TableRow = React.createClass({
   mixins: [PureRenderMixin],
+
+  shouldComponentUpdate(nextProps) {
+    return !areEqual(this.props.rowData, nextProps.rowData) || !areEqual(this.props.headers, nextProps.headers);
+  },
 
   render: function () {
     var tableCells = [];
