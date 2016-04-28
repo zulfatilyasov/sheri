@@ -1,6 +1,6 @@
 import React from 'react'
-import Box from '../box.jsx'
-import BoxTitle from '../box-title/box-title.jsx';
+import Box from '../box';
+import BoxTitle from '../box-title/box-title';
 
 class TitledBox extends React.Component {
   static contextTypes = {
