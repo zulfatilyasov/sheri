@@ -1,4 +1,3 @@
-require('./box-title.styl');
 import React from 'react';
 import IconButton from 'material-ui/lib/icon-button';
 import Back from 'material-ui/lib/svg-icons/hardware/keyboard-backspace';
