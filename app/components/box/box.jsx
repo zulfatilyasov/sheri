@@ -20,6 +20,12 @@ var Box = React.createClass({
           <div style={boxStyle} className="box-body">
             {this.props.children}
           </div>
+
+          <If style={this.props.footerStyle} condition={this.props.footer}>
+            <div className="footer">
+              {this.props.footer}
+            </div>
+          </If>
         </div>
       </Paper>
     );

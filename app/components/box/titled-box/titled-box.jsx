@@ -24,6 +24,8 @@ class TitledBox extends React.Component {
             actions={this.props.actions}
             onGoBack={this.props.onGoBack || this.handleGoBack}
           />}
+        footer={this.props.footer}
+        footerStyle={this.props.footer}
         style={this.props.style}
       >
         {this.props.children}
