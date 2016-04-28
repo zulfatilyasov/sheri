@@ -22,7 +22,9 @@ class TitledBox extends React.Component {
             onGoBack={this.props.onGoBack || this.handleGoBack}
           />}
         style={this.props.style}
-      />
+      >
+        {this.props.children}
+      </Box>
     );
   }
 }
