@@ -16,6 +16,7 @@ class TitledBox extends React.Component {
   render() {
     return (
       <Box
+        className={this.props.className}
         title={<BoxTitle
             title={this.props.title}
             style={this.props.titleStyle}
