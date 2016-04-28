@@ -6,14 +6,16 @@ class BoxTitle extends React.Component {
   render() {
     return (
       <div className="box-title">
-        <IconButton
-          iconStyle={{ fill: '#fff' }}
-          onClick={this.props.onGoBack || void(0)}
-          touch
-        >
-          <Back/>
-        </IconButton>
-        <div className="title-text">
+        <If condition={!this.props.hideBackButton}>
+          <IconButton
+            iconStyle={{ fill: '#fff' }}
+            onClick={this.props.onGoBack || void(0)}
+            touch
+          >
+            <Back/>
+          </IconButton>
+        </If>
+        <div className={`${this.props.hideBackButton ? 'pad' : ''} title-text`}>
           {this.props.title}
         </div>
         <If condition={this.props.actions}>

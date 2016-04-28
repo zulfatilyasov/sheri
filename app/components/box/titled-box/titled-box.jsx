@@ -19,6 +19,7 @@ class TitledBox extends React.Component {
         title={<BoxTitle
             title={this.props.title}
             style={this.props.titleStyle}
+            hideBackButton={this.props.hideBackButton}
             onGoBack={this.props.onGoBack || this.handleGoBack}
           />}
         style={this.props.style}
