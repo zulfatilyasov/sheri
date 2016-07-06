@@ -1,10 +1,16 @@
 import React from 'react';
 import MenuButton from '../menu-button/menu-button';
 import Avatar from 'material-ui/lib/avatar';
-import Badge from 'material-ui/lib/badge';
 import IconButton from 'material-ui/lib/icon-button';
+import classNames from 'classnames';
 
 var TopNav = React.createClass({
+  componentDidMount() {
+    this.setState({
+      open: true,
+    });
+  },
+
   render: function () {
     this.userName = this.props.userFirstName + ' ' + this.props.userLastName;
     this.userAbbr = this.props.userFirstName.substr(0, 1) + '' + this.props.userLastName.substr(0, 1);
@@ -23,8 +29,13 @@ var TopNav = React.createClass({
       padding: 0
     };
 
+    const classes = classNames({
+      'fixed-nav-bar': true,
+      open: this.state.open,
+    });
+
     return (
-      <nav className="fixed-nav-bar">
+      <nav className={classes}>
         <MenuButton onClick={this.props.onMenuIconClick}/>
         <If condition={this.props.logo}>
           {this.props.logo}
@@ -52,16 +63,16 @@ var TopNav = React.createClass({
           </IconButton>
         </div>
         <div className="bell">
-            <If condition={this.props.newNotificationCount}>
-              <div className="badge">
-                {this.props.newNotificationCount}
-              </div>
-            </If>
-            <IconButton style={style}
-                        onClick={this.props.onNotifcationsClick}
-                        iconStyle={iconStyle}
-                        iconClassName="icon icon-notifications">
-            </IconButton>
+          <If condition={this.props.newNotificationCount}>
+            <div className="badge">
+              {this.props.newNotificationCount}
+            </div>
+          </If>
+          <IconButton style={style}
+                      onClick={this.props.onNotifcationsClick}
+                      iconStyle={iconStyle}
+                      iconClassName="icon icon-notifications">
+          </IconButton>
         </div>
         <If condition={this.props.controls}>
           <div className="controls">

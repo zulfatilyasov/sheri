@@ -4,6 +4,7 @@
   "description": "react.js admin panel boilerplate",
   "main": "./lib",
   "dependencies": {
+    "classnames": "^2.2.5",
     "html-webpack-plugin": "^1.6.1",
     "normalize.css": "^3.0.3",
     "react-addons-pure-render-mixin": "^0.14.8"
