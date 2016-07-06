@@ -5,6 +5,12 @@ import IconButton from 'material-ui/lib/icon-button';
 import classNames from 'classnames';
 
 var TopNav = React.createClass({
+  getInitialState: function () {
+    return {
+      open: false,
+    };
+  },
+
   componentDidMount() {
     this.setState({
       open: true,
