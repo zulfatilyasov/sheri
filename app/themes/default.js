@@ -2,7 +2,7 @@
 
 var Colors = require('material-ui/styles/colors');
 var Spacing = require('material-ui/styles/spacing');
-var ColorManipulator = require('material-ui/utils/color-manipulator');
+var ColorManipulator = require('material-ui/utils/colorManipulator');
 
 /**
  *  Light Theme is the default theme used in material-ui. It is guaranteed to
