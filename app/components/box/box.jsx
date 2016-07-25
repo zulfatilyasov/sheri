@@ -1,9 +1,10 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
+import { mergeStyles } from 'material-ui/utils/styles';
 
 var Box = React.createClass({
   render: function () {
-    var boxStyle = this.mergeStyles({padding: 24}, this.props.style);
+    var boxStyle = mergeStyles({padding: 24}, this.props.style);
 
     return (
       <Paper className={this.props.className} zDepth={1}>
