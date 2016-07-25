@@ -1,7 +1,7 @@
 import React from 'react';
 import MenuButton from '../menu-button/menu-button';
-import Avatar from 'material-ui/lib/avatar';
-import IconButton from 'material-ui/lib/icon-button';
+import Avatar from 'material-ui/Avatar';
+import IconButton from 'material-ui/IconButton';
 import classNames from 'classnames';
 
 var TopNav = React.createClass({

@@ -1,6 +1,6 @@
 import React from 'react'
-import MenuItem from 'material-ui/lib/menus/menu-item'
-import LeftNav from 'material-ui/lib/left-nav'
+import MenuItem from 'material-ui/MenuItem';
+import Drawer from 'material-ui/Drawer'
 import DefaultTheme from '../../themes/default.js'
 
 var debounce = function(func, wait, immediate) {
@@ -84,7 +84,7 @@ var SideMenu = React.createClass({
     var menuItemStyle = {color: '#fff'};
 
     return (
-      <LeftNav
+      <Drawer
         disableSwipeToOpen={true}
         open={this.state.isOpen}
         className="leftnav"
@@ -95,7 +95,7 @@ var SideMenu = React.createClass({
           <For each="menuItem" of={this.props.menuItems}> 
             <MenuItem key={menuItem.route} onClick={this.handleMenuItemClick.bind(this, menuItem.route)}>{menuItem.text}</MenuItem>
           </For>
-      </LeftNav>
+      </Drawer>
     );
   }
 });
