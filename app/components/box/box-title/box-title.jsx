@@ -1,6 +1,6 @@
 import React from 'react';
-import IconButton from 'material-ui/lib/icon-button';
-import Back from 'material-ui/lib/svg-icons/hardware/keyboard-arrow-left';
+import IconButton from 'material-ui/IconButton';
+import Back from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 
 class BoxTitle extends React.Component {
   render() {
