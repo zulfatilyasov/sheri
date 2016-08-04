@@ -1,12 +1,9 @@
 import React from 'react';
-import Paper from 'material-ui/lib/paper';
-import StylePropable from 'material-ui/lib/mixins/style-propable';
+import Paper from 'material-ui/Paper';
 
 var Box = React.createClass({
-  mixins: [StylePropable],
-
   render: function () {
-    var boxStyle = this.mergeStyles({padding: 24}, this.props.style);
+    var boxStyle = Object.assign({padding: 24}, this.props.style);
 
     return (
       <Paper className={this.props.className} zDepth={1}>
