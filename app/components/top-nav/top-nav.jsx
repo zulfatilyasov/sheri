@@ -49,7 +49,7 @@ var TopNav = React.createClass({
           {this.props.logo}
         </If>
 
-        <If condition={this.props.organization}>
+        <If condition={this.props.organizations && this.props.organizations.length}>
           <div className="organizations">
             <DropDownMenu value={this.props.selectedOrg} onChange={this.onOrgChange}>
               {
