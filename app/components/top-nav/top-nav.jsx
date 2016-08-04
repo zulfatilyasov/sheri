@@ -2,6 +2,8 @@ import React from 'react';
 import MenuButton from '../menu-button/menu-button';
 import Avatar from 'material-ui/lib/avatar';
 import IconButton from 'material-ui/lib/icon-button';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
 import classNames from 'classnames';
 
 var TopNav = React.createClass({
@@ -46,26 +48,40 @@ var TopNav = React.createClass({
         <If condition={this.props.logo}>
           {this.props.logo}
         </If>
-
+        <If condition={this.props.organization}>
+          <DropDownMenu value={this.props.selectedOrg} onChange={this.onOrgChange}>
+            {
+              this.props.organizations.map(org => (
+                <MenuItem value={org.id} primaryText={org.name}/>
+              ))
+            }
+          </DropDownMenu>
+        </If>
         <div className="exit">
-          <IconButton style={style}
-                      onClick={this.props.onLock}
-                      iconStyle={iconStyle}
-                      iconClassName="icon icon-lock"
-                      tooltip="Log out">
+          <IconButton
+            style={style}
+            onClick={this.props.onLock}
+            iconStyle={iconStyle}
+            iconClassName="icon icon-lock"
+            tooltip="Log out"
+          >
           </IconButton>
         </div>
-        <IconButton style={iconButtonStyle}
-                    onClick={this.props.onProfileClick}
-                    className="avatar"
-                    tooltip={this.userName}>
+        <IconButton
+          style={iconButtonStyle}
+          onClick={this.props.onProfileClick}
+          className="avatar"
+          tooltip={this.userName}
+        >
           <Avatar src={this.props.profileImageUrl}/>
         </IconButton>
         <div className="chat">
-          <IconButton style={style}
-                      onClick={this.props.onChat}
-                      iconStyle={iconStyle}
-                      iconClassName="icon icon-comment">
+          <IconButton
+            style={style}
+            onClick={this.props.onChat}
+            iconStyle={iconStyle}
+            iconClassName="icon icon-comment"
+          >
           </IconButton>
         </div>
         <div className="bell">
@@ -74,10 +90,12 @@ var TopNav = React.createClass({
               {this.props.newNotificationCount}
             </div>
           </If>
-          <IconButton style={style}
-                      onClick={this.props.onNotifcationsClick}
-                      iconStyle={iconStyle}
-                      iconClassName="icon icon-notifications">
+          <IconButton
+            style={style}
+            onClick={this.props.onNotifcationsClick}
+            iconStyle={iconStyle}
+            iconClassName="icon icon-notifications"
+          >
           </IconButton>
         </div>
         <If condition={this.props.controls}>

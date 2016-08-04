@@ -33,17 +33,22 @@ var Master = React.createClass({
     return (
       <AppCanvas>
         <div className={pusherClass}>
-          <TopNav onLock={this.props.onLock}
-                  onChat={this.props.onChat}
-                  onNotifcationsClick={this.props.onNotifcationsClick}
-                  newNotificationCount={this.props.newNotificationCount}
-                  profileImageUrl={this.props.profileImageUrl}
-                  logo={this.props.logo}
-                  controls={this.props.controls}
-                  onProfileClick={this.props.onProfileClick}
-                  userFirstName={this.props.user.firstName}
-                  userLastName={this.props.user.lastName}
-                  onMenuIconClick={this.handleMenuIconClick}/>
+          <TopNav
+            onLock={this.props.onLock}
+            onChat={this.props.onChat}
+            onNotifcationsClick={this.props.onNotifcationsClick}
+            newNotificationCount={this.props.newNotificationCount}
+            profileImageUrl={this.props.profileImageUrl}
+            logo={this.props.logo}
+            controls={this.props.controls}
+            onProfileClick={this.props.onProfileClick}
+            userFirstName={this.props.user.firstName}
+            userLastName={this.props.user.lastName}
+            organizations={this.props.organizations}
+            selectedOrg={this.props.selectedOrg}
+            onOrgChange={this.props.onOrgChange}
+            onMenuIconClick={this.handleMenuIconClick}
+          />
 
           <SideMenu
             menuItems={this.props.menuItems}
