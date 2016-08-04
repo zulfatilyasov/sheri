@@ -49,17 +49,6 @@ var TopNav = React.createClass({
           {this.props.logo}
         </If>
 
-        <If condition={this.props.organizations && this.props.organizations.length}>
-          <div className="organizations">
-            <DropDownMenu value={this.props.selectedOrg} onChange={this.onOrgChange}>
-              {
-                this.props.organizations.map(org => (
-                  <MenuItem value={org.id} primaryText={org.name}/>
-                ))
-              }
-            </DropDownMenu>
-          </div>
-        </If>
         <div className="exit">
           <IconButton
             style={style}
@@ -104,6 +93,17 @@ var TopNav = React.createClass({
         <If condition={this.props.controls}>
           <div className="controls">
             {this.props.controls}
+          </div>
+        </If>
+        <If condition={this.props.organizations && this.props.organizations.length}>
+          <div className="organizations">
+            <DropDownMenu underlineStyle={{ borderColor: '#fff' }} value={this.props.selectedOrg} onChange={this.onOrgChange}>
+              {
+                this.props.organizations.map(org => (
+                  <MenuItem value={org.id} primaryText={org.name}/>
+                ))
+              }
+            </DropDownMenu>
           </div>
         </If>
       </nav>
