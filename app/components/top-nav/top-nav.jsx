@@ -97,7 +97,7 @@ var TopNav = React.createClass({
         </If>
         <If condition={this.props.organizations && this.props.organizations.length}>
           <div className="organizations">
-            <DropDownMenu underlineStyle={{ borderColor: '#fff' }} value={this.props.selectedOrg} onChange={this.onOrgChange}>
+            <DropDownMenu underlineStyle={{ borderColor: '#fff' }} value={this.props.selectedOrg} onChange={this.props.onOrgChange}>
               {
                 this.props.organizations.map(org => (
                   <MenuItem value={org.id} primaryText={org.name}/>
