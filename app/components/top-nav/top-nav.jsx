@@ -20,7 +20,7 @@ var TopNav = React.createClass({
   },
 
   handleOrgChange(a, b, c){
-    log.debug(a, b, c);
+    this.props.onOrgChange(a, b, c);
   },
 
   render: function () {
