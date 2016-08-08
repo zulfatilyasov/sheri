@@ -19,6 +19,10 @@ var TopNav = React.createClass({
     });
   },
 
+  handleOrgChange(a, b, c){
+    log.debug(a, b, c);
+  },
+
   render: function () {
     this.userName = this.props.userFirstName + ' ' + this.props.userLastName;
     this.userAbbr = this.props.userFirstName.substr(0, 1) + '' + this.props.userLastName.substr(0, 1);
@@ -97,7 +101,7 @@ var TopNav = React.createClass({
         </If>
         <If condition={this.props.organizations && this.props.organizations.length}>
           <div className="organizations">
-            <DropDownMenu underlineStyle={{ borderColor: '#fff' }} value={this.props.selectedOrg} onChange={this.props.onOrgChange}>
+            <DropDownMenu underlineStyle={{ borderColor: '#fff' }} value={this.props.selectedOrg} onChange={this.handleOrgChange}>
               {
                 this.props.organizations.map(org => (
                   <MenuItem value={org.id} primaryText={org.name}/>
