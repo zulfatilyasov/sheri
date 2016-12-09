@@ -1,5 +1,5 @@
 # Sheri
-React.js admin panel boilerplate
+React.js admin panel boilerplate.
 
 ## Install dependencies
 `npm install`
